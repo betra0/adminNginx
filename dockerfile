@@ -58,6 +58,7 @@ RUN python3 -m venv venv \
     && . venv/bin/activate \
     && pip install -r requirements.txt
 
+RUN rm -rf /var/cache/apk/* /root/.cache /opt /media /mnt /srv
 # Exponer puertos
 EXPOSE 81 80 82
 
