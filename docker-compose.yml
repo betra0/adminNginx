@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .  # Apunta al directorio actual
+    ports:
+      - "81:82"  # Mapea el puerto 81 del contenedor al puerto 82 de la máquina
