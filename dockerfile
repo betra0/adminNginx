@@ -36,6 +36,7 @@ RUN apk add --no-cache python3 py3-pip \
 
 # Crear carpetas necesarias
 RUN mkdir -p /app/frontend/build /app/backend
+RUN mkdir -p /app/logs
 
 # Copiar el código de la API y frontend
 COPY backend /app/backend
@@ -58,7 +59,7 @@ RUN python3 -m venv venv \
     && pip install -r requirements.txt
 
 # Exponer puertos
-EXPOSE 81
+EXPOSE 81 80 82
 
 
 
